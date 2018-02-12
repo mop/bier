@@ -537,8 +537,7 @@ def main():
     all_weights = tf.get_collection('weights')
     all_weights = list(set(all_weights))
     for w in all_weights:
-        if 'embedding' not in w.name:
-            loss += tf.cast(tf.reduce_sum(w * w) * WEIGHT_DECAY, dtype=dtype)
+        loss += tf.cast(tf.reduce_sum(w * w) * WEIGHT_DECAY, dtype=dtype)
 
     all_vars = tf.get_collection(tf.GraphKeys.TRAINABLE_VARIABLES)
     hidden_vars = [v for v in all_vars if 'embedding' not in v.name]
