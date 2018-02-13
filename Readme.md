@@ -21,3 +21,5 @@ you are planning to use this work, please cite one of the following papers:
 To run the code, see ./run.sh and ./run_eval.sh.
 The train-images file is a numpy file consisting of images of size 256x256 and train-labels are the corresponding
 labels. The label indices should be between [0, total-number-of-labels) (i.e. they should be non-negative, and continuous).
+
+The initial weights for the GoogLeNetv1 inception model (dumped from the caffe model) is available at: https://files.icg.tugraz.at/d/c3e1a047fc/
